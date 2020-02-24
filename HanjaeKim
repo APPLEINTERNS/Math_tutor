@@ -1,0 +1,54 @@
+// This Program can be use for math tutor.
+// CIT120 T1
+// Hanjae Kim
+#include<iostream>
+#include<iomanip>
+#include<time.h>
+#include<random>
+using namespace std;
+
+int main()
+{
+
+	srand(time(0));
+
+
+	float num1 = rand() % 100;
+	float num2 = rand() % 100;       //generate 2 random numbers
+	float guess;                     //user's answer
+	float sum = num1 - num2;         //actual answer
+
+	cout << "         " << "Description: This program can be used as a math tutor for a young student.\n" <<
+		"         " << "LAB: Math tutor\n" <<
+		"         " << "Course: CIT 120 T1\n" <<
+		"         " << "Programmer: Hanjae Kim\n" <<
+		"         " << "Last Modified: 02/23/20\n\n";
+
+
+
+
+	cout << "solve\n\n";
+	cout << "   " <<num1 << endl;         // first number
+	cout << "  -";                        //minus
+	cout <<num2 << endl;                  // second number
+    cout << "======\n";
+	
+	
+	cin >> guess;                         //Its waiting to show answer until user put user's answer.
+	cout <<"======"<<"\n\n"; 
+	
+	
+	if (guess==sum)
+	{
+		cout << "Good JoB !\n\n";         // this statement shows when user enter right answer
+	}
+	else
+	{
+		cout << "Wrong answer ! The answer is " << sum <<"\n\n"; // this statement show when user enter wrong answer
+	}
+
+	cout << "Please Hit ENTER to exit the program";
+
+
+	return 0;
+}
